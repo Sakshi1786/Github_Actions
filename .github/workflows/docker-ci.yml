@@ -1,0 +1,32 @@
+name: Docker CI
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+   
+        steps:
+
+         - name: Checkout code
+           uses: actions/checkout@v4
+        
+         - name: Build Application
+           run: |
+            echo "Building application"
+
+         - name: Run test
+           run: |
+            echo "Running test"
+
+         - name: Building Docker image
+           run: |
+            docker build \
+            -t myapp :${{ github.sha }} .
+
+    
+    
