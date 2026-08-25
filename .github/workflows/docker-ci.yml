@@ -23,7 +23,7 @@ jobs:
 
          - name: Building Docker image
            run: |
-            docker build -t myapp :${{ github.sha }} .
+            docker build -t myapp:${{ github.sha }} .
 
     
     
