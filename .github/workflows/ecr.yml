@@ -5,8 +5,8 @@ on:
 
 
 env:
-  AWS_REGION: eu-west-1
-  ECR_REPOSITORY: myapp
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: sakshi_repo
 
 jobs:
   build-and-push:
